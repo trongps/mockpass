@@ -1,5 +1,14 @@
-const { app } = require('../app')
+let app
+try {
+  app = require('../app').app
+} catch (err) {
+  app = (req, res) => {
+    res.status(500).json({
+      error: 'Initialization failed',
+      message: err.message,
+      stack: err.stack,
+    })
+  }
+}
 
-// Vercel Serverless Functions require exporting the Express app
-// instead of calling app.listen()
 module.exports = app
