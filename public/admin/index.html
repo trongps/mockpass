@@ -51,7 +51,7 @@
           <div class="form-grid">
             <div class="form-group">
               <label for="nric">NRIC (e.g. S1234567A)</label>
-              <input type="text" id="nric" name="nric" required placeholder="S1234567A">
+              <input type="text" id="nric" name="nric" required placeholder="S1234567A" pattern="^[Ss]\d{7}[A-Za-z]$" title="Must start with S, followed by 7 digits, and end with 1 letter (e.g. S1234567A)">
             </div>
             
             <div class="form-group">
