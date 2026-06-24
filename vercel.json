@@ -1,7 +1,7 @@
 {
   "functions": {
-    "api/**/*.js": {
-      "includeFiles": "static/**"
+    "**/*.js": {
+      "includeFiles": ["static/**", "public/**"]
     }
   },
   "rewrites": [
