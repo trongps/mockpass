@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockpass - Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2e5cff;
+            --primary-hover: #1e45d1;
+            --bg-color: #f4f7fb;
+            --text-color: #333;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, var(--primary-color), #6b8cff);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(46, 92, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+        }
+
+        .section h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(46, 92, 255, 0.2);
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e53e3e;
+            font-size: 0.9em;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-icon">M</div>
+            <h1>Welcome to Mockpass</h1>
+            <p class="subtitle">Your ultimate Mock Server for Singpass & MyInfo Integration</p>
+        </header>
+
+        <div class="section">
+            <h2>🚀 Quick Start</h2>
+            <p>Mockpass is currently running successfully! You can use this URL as the base endpoint for testing your application's Singpass authentication and MyInfo data retrieval.</p>
+            <p>To integrate, change your application's OIDC and MyInfo base URLs to point to this domain:</p>
+            <div class="code-block">https://mockpass-sandy.vercel.app</div>
+        </div>
+
+        <div class="section">
+            <h2>👥 Persona Admin Dashboard</h2>
+            <p>We provide a dedicated Admin interface to easily manage and generate mock user profiles (personas) for your testing scenarios.</p>
+            <p>You can dynamically configure their Date of Birth, Income, Education level, and other MyInfo attributes.</p>
+            <a href="/admin/index.html" class="btn">Go to Admin Dashboard</a>
+        </div>
+
+        <div class="section">
+            <h2>🔑 Authentication Flow</h2>
+            <p>When your application redirects users to Mockpass to authenticate, they will be greeted with a beautifully redesigned login interface simulating the Singpass experience.</p>
+            <p>Users can log in using the NRIC format (e.g., <code>S1234567A</code>) and their generated <code>Password</code> to instantly retrieve their configured MyInfo profiles.</p>
+        </div>
+    </div>
+</body>
+</html>
