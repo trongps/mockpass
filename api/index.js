@@ -6,7 +6,7 @@ process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception thrown:', err)
 })
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
   try {
     const mockpass = require('../app')
     if (!mockpass || !mockpass.app) {
