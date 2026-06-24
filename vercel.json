@@ -1,7 +1,7 @@
 {
   "functions": {
     "**/*.js": {
-      "includeFiles": ["static/**", "public/**"]
+      "includeFiles": "{static/**,public/**}"
     }
   },
   "rewrites": [
