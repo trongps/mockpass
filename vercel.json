@@ -1,10 +1,11 @@
 {
   "functions": {
     "**/*.js": {
-      "includeFiles": "{static/**,public/**}"
+      "includeFiles": "static/**"
     }
   },
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
     { "source": "/singpass/(.*)", "destination": "/api/index" },
     { "source": "/corppass/(.*)", "destination": "/api/index" },
     { "source": "/v2/(.*)", "destination": "/api/index" },
