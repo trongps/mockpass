@@ -1,5 +1,5 @@
 {
-  "S_TEST_AGE_16": {
+  "S1234567A": {
     "name": {
       "lastupdated": "2020-09-10",
       "source": "1",
@@ -38,7 +38,7 @@
     },
     "dynamic_age": 16
   },
-  "S_TEST_AGE_15": {
+  "S7654321A": {
     "name": {
       "lastupdated": "2020-09-10",
       "source": "1",
