@@ -5,9 +5,15 @@
     }
   },
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/index"
-    }
+    { "source": "/singpass/(.*)", "destination": "/api/index" },
+    { "source": "/corppass/(.*)", "destination": "/api/index" },
+    { "source": "/v2/(.*)", "destination": "/api/index" },
+    { "source": "/sgid/(.*)", "destination": "/api/index" },
+    { "source": "/sign/(.*)", "destination": "/api/index" },
+    { "source": "/fapi/(.*)", "destination": "/api/index" },
+    { "source": "/consent/(.*)", "destination": "/api/index" },
+    { "source": "/myinfo/(.*)", "destination": "/api/index" },
+    { "source": "/admin/api/(.*)", "destination": "/api/index" },
+    { "source": "/.well-known/(.*)", "destination": "/api/index" }
   ]
 }
